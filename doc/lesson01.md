@@ -126,7 +126,7 @@
   - <a href="https://www.youtube.com/watch?v=Vumy_fbo-Qs&list=PLkKunJj_bZefB1_hhS68092rbF4HFtKjW&index=15">Yakov Fain: HTTP Sessions, Cookies, WAR deployments, JSP (по-русски)</a>
   - <a href="https://www.youtube.com/playlist?list=PLoij6udfBncjHaO5s7Ln4w4BLj5FVc49P">Golovach Courses: Junior.February2014.Servlets</a>
   - <a href="http://blog.trifork.com/2014/07/14/how-to-remotely-debug-application-running-on-tomcat-from-within-intellij-idea">Remotely debug on tomcat from IDEA</a>
-  - <a href="http://www.java2ee.ru/jsp/">Java Server Page</a>
+  - <a href="http://java-online.ru/jsp.xhtml">Java Server Page</a>
   - <a href="http://stackoverflow.com/questions/1890438/how-to-get-parameters-from-the-url-with-jsp#1890462">Java объекты, доступные в JSP</a>
   - <a href="http://java-online.ru/jsp.xhtml">Java Server Pages (JSP)</a>
 
