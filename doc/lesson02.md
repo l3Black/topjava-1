@@ -10,13 +10,13 @@
 ### ![video](https://cloud.githubusercontent.com/assets/13649199/13672715/06dbc6ce-e6e7-11e5-81a9-04fbddb9e488.png) 1. <a href="https://drive.google.com/open?id=0B9Ye2auQ_NsFXzByNVF3VV9zM1k">Отображения списка еды в JSP</a>
 #### Apply 2_1_HW1.patch
 
+> - Переименовал `TimeUtil` в `DateTimeUtil`
+> - Переименовал `mealList.jsp` в `meals.jsp`
 > - Изменения в `MealsUtil`:
 >    - Сделал константу `List<Meal> MEALS`
 >    - Для фильтрации по времени и без нее в метод `getFiltered` передаю реализацию `Predicate` (см. паттерн [Стратегия](https://refactoring.guru/ru/design-patterns/strategy))
 > - Форматирование даты сделал на основе <a href="http://stackoverflow.com/questions/35606551/jstl-localdatetime-format#35607225"> Custom EL function</a>
 >    - [Create a custom Function for JSTL через tag library descriptor (TLD)](http://findnerd.com/list/view/How-to-create-a-custom-Function-for-JSTL/2869/)
-> - Переименовал `TimeUtil` в `DateTimeUtil`
-> - Переименовал `mealList.jsp` в `meals.jsp`
 > - Добавил еще один способ вывести `dateTime` через стандартную JSTL функцию `replace`  (префикс `fn` в шапке также надо поменять)
 
 - [jsp:useBean](http://www.labir.ru/j2ee/jspUseBean.html)
@@ -25,7 +25,7 @@
 ### ![video](https://cloud.githubusercontent.com/assets/13649199/13672715/06dbc6ce-e6e7-11e5-81a9-04fbddb9e488.png) 2. <a href="https://drive.google.com/open?id=0B9Ye2auQ_NsFQndBeWFOa3phRTg">Optional: реализация CRUD</a>
 #### Apply 2_2_HW1_optional.patch
 Про использование паттерна Repository будет подробно рассказано в видео "Слои приложения"
-> Согласно ответам на [Java Interfaces/Implementation naming convention](https://stackoverflow.com/questions/2814805/java-interfaces-implementation-naming-convention) 
+> - Согласно ответам на [Java Interfaces/Implementation naming convention](https://stackoverflow.com/questions/2814805/java-interfaces-implementation-naming-convention) 
 убрал `Impl` в `InMemory` (и всех последующих) реализациях репозиториев. Они не нужны.
 > - Поправил `InMemoryMealRepository.save()`. Если обновляется еда, которой нет в хранилище (c несуществующим id), вставка не происходит.
 > - В `MealServlet.doGet()` сделал выбор через `switch`
@@ -176,7 +176,7 @@
 
 `@Autowired`  инжектит по типу (т.е. ижектит класс который реализует `UserRepository`). Обычно он один. Если у нас несколько реализаций, Spring не поднимится и поругается - `No unique bean`.
  В этом случае <a href="http://www.mkyong.com/spring/spring-autowiring-qualifier-example/">можно уточнить имя бина через @Qualifier</a>. `@Qualifier` обычно добавляют только в случае нескольких реализаций.
-- [Inject 2 beans of same type](https://stackoverflow.com/a/2153680/548473)
+См. [Inject 2 beans of same type](https://stackoverflow.com/a/2153680/548473)
 
 > Почему нельзя сервлет помещать в Spring контекст?
 
