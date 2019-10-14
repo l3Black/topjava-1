@@ -90,7 +90,7 @@
 На многих проектах (и собеседованиях) практикуют разделение на уровне maven модулей entity слоя от логики и соответствующей конвертацией ВСЕХ Entity в TO, даже если у них те же самые поля.
 Хороший ответ когда TO обязательны есть на <a href="http://stackoverflow.com/questions/21554977/should-services-always-return-dtos-or-can-they-also-return-domain-models#21569720">stackoverflow: When to Use</a>.
 
-> Почему контроллеры положили в папку web, а не в conrollers?
+> Почему контроллеры положили в папку web, а не в controllers?
 
 То же самое что `domain/model` - просто разные названия.
 
