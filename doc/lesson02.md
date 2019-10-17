@@ -77,6 +77,11 @@
    - <a href="http://stackoverflow.com/questions/6640784/difference-between-active-record-and-dao">Difference between Active Record and DAO</a>
 
 ## ![question](https://cloud.githubusercontent.com/assets/13649199/13672858/9cd58692-e6e7-11e5-905d-c295d2a456f1.png) Ваши вопросы
+
+> Почему у `User.registered` тип `Date`, а `Meal.dateTime` `LocalDateTime `?
+
+Время регистрации - абсолютное (конкретный момент), а время еды по бизнес логике относительно (те не зависит от часового пояса)
+
 >  Какова цель деления приложения на слои?
 
 Управляемость проекта (особенно большого) повышается на порядок:
