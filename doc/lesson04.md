@@ -42,7 +42,7 @@
 
 ## Занятие 4:
 ### ![video](https://cloud.githubusercontent.com/assets/13649199/13672715/06dbc6ce-e6e7-11e5-81a9-04fbddb9e488.png) 2. <a href="https://drive.google.com/open?id=0B9Ye2auQ_NsFU005ZzBNZmZnTVU">Методы улучшения качества кода</a>
-- Сделайте интеграцию своего GitHub-репозитория и подключите сверху своего [README.md](https://github.com/JavaWebinar/topjava/blob/master/README.md) ([Raw](https://raw.githubusercontent.com/JavaWebinar/topjava/master/README.md)) интергацию с
+- Добавьте в своем `readme.md` сверху две строчки `Codacy Badge` и `Build Status`, по аналогии c моим [README.md](https://github.com/JavaWebinar/topjava/blob/master/README.md) ([Raw](https://raw.githubusercontent.com/JavaWebinar/topjava/master/README.md)). `Codacy Badge` берется с сайта `codacy -> Settings`
   - <a href="https://www.codacy.com">Codacy Check code</a> (проверка стиля и поиск багов в коде).
      - добавил [Codacy configuration file](https://support.codacy.com/hc/en-us/articles/360005097654-Ignore-files-from-Codacy-analysis) для ислючения из проверок содержимого `webapp` и `READ.me` (на нашем проекте он выдает на них кучу ошибок)
      - после правок паттернов можно сделать [повторный анализ](https://support.codacy.com/hc/en-us/articles/213840489-How-do-I-reanalyze-my-project-). С результатами тормозит.  
