@@ -8,17 +8,17 @@
 - В PostgreSQL обнаружилась бага: граничное значение `0:00` из за ошибок округления попадает в предыдущий интервал.
 Мораль: всегда в тестах проверяйте граничные значения. Добавил этот случай в тестовые данные.
 - В тестах `delete` и `create` проверяю результат напрямую (не через `getAll`)
-- Добавил инициализацию в `InMemoryMealRepository`, чтобы были фильтрации результаты при запуске `SpringMain` 
-> Вопрос - почему не работает инициализация тестовыми данными через `save()`? 
+- Добавил инициализацию в `InMemoryMealRepository`, чтобы были результаты фильтрации при запуске `SpringMain` 
+> Вопрос - почему в `InMemoryMealRepository` не работает инициализация тестовыми данными через `save()`? 
 
 #### Apply 5_0_2_change_between.patch
 - Изменил `MealRepository.getBetween` (принимаю `@Nullable LocalDate`). Реализовывать теперь можно по разному.
 
 ## ![video](https://cloud.githubusercontent.com/assets/13649199/13672715/06dbc6ce-e6e7-11e5-81a9-04fbddb9e488.png) [Обзор JDK 9/11. Миграция Topjava с 1.8 на 11/12](http://javaops.ru/view/resources/jdk8_11)
-> - Можно ставить либо 11 версию JDK, либо 12. В проекте оставил 11, т.к. она LTS (long term support) и на 12 еще мало проектов. Для JDK 12 нужно поправить 2 места:
->    - `pom.xml - <java.version>12</java.version>`
->    - `.travis.yml - jdk: openjdk12` 
-> - Для запуска Tomcat под JDK11/12 не из IDEA проверь переменную окружения `JAVA_HOME` (версия java в path проверяется просто: `java -version`) и версию Tomcat 9.x.
+> - Можно ставить любую версию JDK: 11, 12 или 13. В проекте оставил 11, т.к. она LTS (long term support) и на 12 еще мало проектов. Для JDK 12/13 нужно поправить 2 места:
+>    - `pom.xml - <java.version>xx</java.version>`
+>    - `.travis.yml - jdk: openjdkxx` 
+> - Для запуска Tomcat под JDK11/12/13 не из IDEA проверь переменную окружения `JAVA_HOME` (версия java в path проверяется просто: `java -version`) и версию Tomcat 9.x.
 
 
 #### Apply 5_1_jdk_11.patch
