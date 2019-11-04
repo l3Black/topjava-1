@@ -109,6 +109,8 @@
     -  <a href="https://bitbucket.org/montanajava/jpaattributeconverters">Using the Java 8 Date Time Classes with JPA</a>
 
 #### **Apply 4_8_add_named_query_and_transaction.patch**
+> Чтобы посмотреть информацию о транзакциях (открытие/закрытие и пр.), можно выставить в конфигурации logback 
+`<logger name="org.springframework.orm.jpa.JpaTransactionManager" level="debug"/>`
 
 -  <a href="http://ru.wikipedia.org/wiki/Транзакция_(информатика)">Транзакция. ACID. Уровни изоляции транзакций.</a>
 -  <a href="http://www.tutorialspoint.com/spring/spring_transaction_management.htm">Spring Transaction Management</a>
