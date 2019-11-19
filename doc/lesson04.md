@@ -121,7 +121,7 @@
 
 Вот ответ от Oliver Drotbohm, автора Spring-Data на предложение работать без транзакция для операций чтения (`propagation=Propagation.SUPPORTS`): [Improve performance with Propagation.SUPPORTS for readOnly operation](https://jira.spring.io/browse/DATAJPA-601). Коротко:
 - Статья устаревшая и неверно упрощает многие вещи. Есть множество вещей, которые влияют на производительность. 
-- Без транзакции не будет оптимизация по флагу `readOnly` в JDBC и в управлении ресурсами Spring's JPA. (в том числе выключение `flush`)
+- Без транзакции не будет оптимизация по флагу `readOnly` при выполнении JDBC и в управлении ресурсами Spring's JPA. (в том числе выключение `flush`)
 См. [Non-transactional data access and the auto-commit mode](https://developer.jboss.org/wiki/Non-transactionalDataAccessAndTheAuto-commitMode)
 
 Справочник:
