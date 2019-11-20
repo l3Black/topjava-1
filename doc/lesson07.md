@@ -185,6 +185,7 @@ hamcrest-all используется в проверках `RootControllerTest`
 ### Optional 2
 - 5: попробовать отключить кэш в тестах через `NoOpCacheManager`. 
   - [Spring Cache and Integration Testing](https://dzone.com/articles/spring-cache-and-integration-testing)
+  - [JPA 2.0 disable session cache for unit tests](https://stackoverflow.com/a/58963737/548473)
 ---------------------
 ## ![error](https://cloud.githubusercontent.com/assets/13649199/13672935/ef09ec1e-e6e7-11e5-9f79-d1641c05cbe6.png) Типичные ошибки и подсказки по реализации
 - 1: Ошибка в тесте _Invalid read array from JSON_ обычно расшифровывается немного ниже: читайте внимательно.
