@@ -112,7 +112,6 @@ GRANT ALL PRIVILEGES ON DATABASE topjava TO "user";
   - <a href="https://www.youtube.com/playlist?list=PLIU76b8Cjem5qdMQLXiIwGLTLyUHkTqi2">Уроки по JDBC</a>
   - <a href="http://postgresguide.com/">Postgres Guide</a>
   - <a href="http://www.postgresqltutorial.com">PostgreSQL Tutorial</a>
-  - <a href="http://campus.codeschool.com/courses/try-sql">Try SQL</a>
   - <a href="http://java-course.ru/begin/database01/">Базы данных на Java</a>
   - <a href="http://java-course.ru/begin/database02/">Возможности JDBC — второй этап</a>
 - Дополнительно:
