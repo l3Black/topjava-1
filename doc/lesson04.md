@@ -209,7 +209,7 @@ Hibernate (как любая ORM) реализует маппинг таблиц
   - <a href="https://en.wikibooks.org/wiki/Java_Persistence/ManyToOne">Реализация ManyToOne</a>
 - 2: Имплементировать и протестировать `JpaMealRepository`.
 
-#### Optional
+### Optional
 
 - 3: Добавить в тесты `MealServiceTest` функциональность `@Rule`:
   - 3.1: проверку Exception

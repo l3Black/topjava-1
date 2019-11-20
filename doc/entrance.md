@@ -79,7 +79,7 @@ Java Enterprise Online Project
 
 #### ВНИМАНИЕ: варианты Optional делайте в `UserMealsUtil` в одной ветке в разных методах. Проще делать, проще проверять
 
-#### Optional (Java 8 Stream API)
+### Optional (Java 8 Stream API)
 ```
 Сделать реализацию через Java 8 Stream API.
 ```
@@ -99,7 +99,7 @@ Java Enterprise Online Project
    - [Сергей Куксенко — Stream API, часть 1](https://www.youtube.com/watch?v=O8oN4KSZEXE)
    - [Сергей Куксенко — Stream API, часть 2](https://www.youtube.com/watch?v=i0Jr2l3jrDA)
 
-#### Optional 2 (+5 бонусов)
+### Optional 2 (+5 бонусов)
 ```
 Сделать реализацию со сложностью O(N) (обратите внимание на п.13 замечаний):
 - циклом за 1 проход по List<UserMeal>

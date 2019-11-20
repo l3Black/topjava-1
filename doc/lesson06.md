@@ -272,7 +272,7 @@ Hibernate supports following open-source cache implementations out-of-the-box: E
   - 1.3.2 в одном контроллере нельзя использовать другой. Чтобы не дублировать код, можно сделать наследование контроллеров от абстрактного класса.
   - 1.3.3 добавить локализацию и `jsp:include` в `mealForm.jsp / meals.jsp`
 
-#### Optional
+### Optional
 - 2.1 Добавить транзакционность (`DataSourceTransactionManager`) в Jdbc-реализации  
 - 2.2 Добавить еще одну роль к юзеру Admin (будет 2 роли: `ROLE_USER, ROLE_ADMIN`).
 - 2.3 Добавить проверку ролей в UserTestData.assertMatch
