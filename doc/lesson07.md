@@ -183,7 +183,7 @@ hamcrest-all используется в проверках `RootControllerTest`
 **На следующем занятии используется JavaScript/jQuery. Если у вас там пробелы, <a href="https://github.com/JavaOPs/topjava#html-javascript-css">пройдите его основы</a>**
 
 ### Optional 2
-- 5: попробовать отключить кэш в тестах через `NoOpCacheManager`. 
+- 5: попробовать отключить кэш в тестах через `NoOpCacheManager` (все тесты должны проходить). 
   - [Spring Cache and Integration Testing](https://dzone.com/articles/spring-cache-and-integration-testing)
   - [JPA 2.0 disable session cache for unit tests](https://stackoverflow.com/a/58963737/548473)
 ---------------------
