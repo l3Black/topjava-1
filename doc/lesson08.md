@@ -8,9 +8,9 @@
 ### ![correction](https://cloud.githubusercontent.com/assets/13649199/13672935/ef09ec1e-e6e7-11e5-9f79-d1641c05cbe6.png) Правки в проекте
 
 #### Apply 8_0_fix.patch
-- Мелкие правки кода
-- Переименовал `spring-tools.xml` в `spring-cache.xml`
-- Убрал в тестах хвосты JUnit4 
+> - Мелкие правки кода
+> - Переименовал `spring-tools.xml` в `spring-cache.xml`
+> - Убрал в тестах хвосты JUnit4 
 
 ## ![hw](https://cloud.githubusercontent.com/assets/13649199/13672719/09593080-e6e7-11e5-81d1-5cb629c438ca.png) Разбор домашнего задания HW7
 
