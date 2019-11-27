@@ -29,7 +29,8 @@
 
 #### Apply 8_02_HW07_rest_controller.patch
 > - Как и для юзера сериализуем json ответ контроллера и сравниваем через `ResultMatcher`. Для `MealTo` используем в сравнении `isEqualTo`.  
-> - В `MealTo` вместо изменяемых полей и конструктора без параметров сделал `@ConstructorProperties` ([Using @ConstructorProperties](https://www.logicbig.com/tutorials/misc/jackson/constructor-properties.html)). `Immutable` классы всегда предпочтительнее для данных.
+> - В `MealTo` вместо изменяемых полей и конструктора без параметров сделал `@ConstructorProperties`. `Immutable` классы всегда предпочтительнее для данных.
+>   - [Using @ConstructorProperties](https://www.logicbig.com/tutorials/misc/jackson/constructor-properties.html)
 
 ### ![video](https://cloud.githubusercontent.com/assets/13649199/13672715/06dbc6ce-e6e7-11e5-81a9-04fbddb9e488.png) 2. <a href="https://drive.google.com/open?id=0B9Ye2auQ_NsFLXZ3OHdac18yZlk">HW7_Optional</a>
 #### Apply 8_03_HW07_formatters.patch
@@ -43,11 +44,11 @@
   
 #### Apply 8_05_HW07_disable_tests_cache
 > - Удалил очистку кэша и `JpaUtil`
-> - Удалил `AbstractJpaUserServiceTest` и сделал тесты по аналогии с `AbstractMealServiceTest`
-> - Переопределил `spring-cache.xml` в тестах и выставил требуемые для отключения кэша значения. Для отключения кэша Hibernate 2-го уровня `noOpCacheManager` недостаточно, требуется выставить `hibernate.cache.use_second_level_cache=false`.
-Кроме стандартного использования файла пропертей можно задать их прямо в конфигурации (через автодополнение можно смотреть варианты использования)
+> - Удалил `AbstractJpaUserServiceTest` и сделал тесты валидации по аналогии с `AbstractMealServiceTest`
+> - Переопределил в тестах `spring-cache.xml`: для отключения кэша Hibernate 2-го уровня `noOpCacheManager` недостаточно, требуется выставить `hibernate.cache.use_second_level_cache=false`.
+Кроме стандартного использования файла пропертей можно задать их прямо в конфигурации (через автодополнение в xml можно смотреть все варианты)
 >   - [Example of PropertyOverrideConfigurer](https://www.concretepage.com/spring/example_propertyoverrideconfigurer_spring)
->   - [The util Schema](https://docs.spring.io/spring/docs/current/spring-framework-reference/core.html#xsd-schemas-util)      
+>   - [Spring util schema](https://docs.spring.io/spring/docs/current/spring-framework-reference/core.html#xsd-schemas-util)      
 > - На этапе компиляции реализация `ehcache` больше не требуется (только `cache-api`), вернул ей `runtime`.
 
 ## Занятие 8:
@@ -150,8 +151,13 @@ DataTables/Bootstrap
 -  <a href="http://www.baeldung.com/security-spring">Security with Spring</a>
 -  [Decode/Encode Base64 online](http://decodebase64.com/)
 
-Вместо `curl -v -H 'Authorization: Basic dXNlckB5YW5kZXgucnU6cGFzc3dvcmQ=' http://localhost:8080/topjava/rest/profile/meals`
-лучше использовать `curl -v --user user@yandex.ru:password http://localhost:8080/topjava/rest/profile/meals`
+Вместо 
+
+`curl -v -H 'Authorization: Basic dXNlckB5YW5kZXgucnU6cGFzc3dvcmQ=' http://localhost:8080/topjava/rest/profile/meals`
+
+лучше использовать эквивалентный
+
+`curl -v --user user@yandex.ru:password http://localhost:8080/topjava/rest/profile/meals`
 
 ## ![question](https://cloud.githubusercontent.com/assets/13649199/13672858/9cd58692-e6e7-11e5-905d-c295d2a456f1.png) Ваши вопросы
 > Что делает код?
