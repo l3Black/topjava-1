@@ -119,7 +119,7 @@ DataTables/Bootstrap
 - <a href="https://datatables.net/upgrade/1.10-convert">Converting parameter names for 1.10</a>
 - <a href="http://stackoverflow.com/questions/25207147/datatable-vs-datatable-why-is-there-a-difference-and-how-do-i-make-them-w">dataTable() vs. DataTable()</a>
 
-#### Apply 8_08_refactor_js.patch
+#### Apply 8_09_refactor_js.patch
 >  - Вместо глабальных переменных `ajaxUrl`, `datatableApi` задаю их в объекте контекст, который передаю в `makeEditable()` как параметр  
 >  - Вынес переменную `form = $('#detailsForm')` (инициализирую только 1-н раз)
 >  - [В `jquery.ajax` заменил depricated `success` на `done()`](http://api.jquery.com/jquery.ajax/#jqXHR)
