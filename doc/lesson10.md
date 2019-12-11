@@ -2,8 +2,6 @@
 
 ## [Материалы занятия](https://drive.google.com/open?id=0B9Ye2auQ_NsFfk43cG91Yk9pM3JxUHVhNFVVdHlxSlJtZm5oY3A4YXRtNk1KWEZxRlFNeW8)
 
-## ![hw](https://cloud.githubusercontent.com/assets/13649199/13672719/09593080-e6e7-11e5-81d1-5cb629c438ca.png) Разбор домашнего задания HW9
-
 ### ![correction](https://cloud.githubusercontent.com/assets/13649199/13672935/ef09ec1e-e6e7-11e5-9f79-d1641c05cbe6.png) Правки в проекте
 
 #### Apply 10_0_1_fix.patch
@@ -15,6 +13,8 @@
 поэтому в классах `UserTestData` и `MealTestData` создаю его инстансы с заданным типом и методикой сравнения.      
 > - Общие вещи в тестах вынес в `AbstractControllerTest`. В таких языках, как `Scala` или `Kotlin` мы можем добавлять свои методы к существующему классу (просится модификация `MockHttpServletRequestBuilder`).
 К наследованию он приспособлен плохо, поэтому сделал обертку-адаптер `AbstractControllerTest.RequestWrapper` и методы `wrap/unwrap`
+
+## ![hw](https://cloud.githubusercontent.com/assets/13649199/13672719/09593080-e6e7-11e5-81d1-5cb629c438ca.png) Разбор домашнего задания HW9
 
 ### ![video](https://cloud.githubusercontent.com/assets/13649199/13672715/06dbc6ce-e6e7-11e5-81a9-04fbddb9e488.png) 1. <a href="https://drive.google.com/open?id=0B9Ye2auQ_NsFZnQ2dDZsT0dvYjQ">HW9</a>
 #### Apply 10_1_HW9_binding_ajax.patch
@@ -115,7 +115,7 @@ Datatables перевели на ajax (`"ajax": {"url": ajaxUrl, ..`), те пр
 #### Apply 10_11_global_exception.patch
 > - Перед  отображением exception предварительно делаю `ValidationUtil.getRootCause`
 > - Добавил локализацию
-> - Добавил общий статус `500` в ответ и отображение (будем кастомизировать) 
+> - Добавил общий статус `500` в ответ и отображение (на следующем уроке будем его менять, в зависимости от типа ошибки) 
 
 -  <a href="http://spring.io/blog/2013/11/01/exception-handling-in-spring-mvc#global-exception-handling">Global Exception Handling</a>
 
@@ -149,7 +149,7 @@ Datatables перевели на ajax (`"ajax": {"url": ajaxUrl, ..`), те пр
 > - Добавил методы сериализации в json `JsonUtil.writeAdditionProps` с дополнительными полями и `AbstractControllerTest$RequestWrapper.jsonUserWithPassword` для того, 
 чтобы передавать в контроллер пользователя с паролем (который теперь не сериализуется)   
 
-#### В реальном приложении для управления паролем необходим отдельный UI интерфейс с подтверждением старого пароля - одна из ваших доработок проекта 
+### В реальном приложении для управления паролем необходим отдельный UI интерфейс с подтверждением старого пароля - одна из ваших доработок проекта 
 
 - [@JsonProperty READ_ONLY / WRITE_ONLY](https://stackoverflow.com/a/12505165/548473)
 
@@ -186,16 +186,16 @@ Datatables перевели на ajax (`"ajax": {"url": ajaxUrl, ..`), те пр
 
 [`BCryptPasswordEncoder` automatically generates a salt and concatenates it with the hash value in a single String](http://stackoverflow.com/a/8528804/548473).
 
-> Когда запускается в `GlobalControllerExceptionHandler` метод `defaultErrorHandler`? Когда как в него исключение попадает? Как выбирается, кто обрабатывает исключения: `ExceptionInfoHandler` или `GlobalControllerExceptionHandler`?
+> Когда запускается в `GlobalExceptionHandler` метод `defaultErrorHandler`? Когда как в него исключение попадает? Как выбирается, кто обрабатывает исключения: `ExceptionInfoHandler` или `GlobalExceptionHandler`?
 
- `GlobalControllerExceptionHandler` попадает в контекст спринг (через `@ControllerAdvice` его находят в пакете `web`). Далее спринг перехватывает исключения и отправляет в подходящий по исключению метод `GlobalControllerExceptionHandler`. `ExceptionInfoHandler` помечен `@ControllerAdvice(annotations = RestController.class)`, он обрабатывает только ошибки из всех контроллеров с аннотацией `RestController`.
+ `GlobalExceptionHandler` попадает в контекст спринг (через `@ControllerAdvice` его находят в пакете `web`). Далее спринг перехватывает исключения и отправляет в подходящий по исключению метод `GlobalExceptionHandler`. `ExceptionInfoHandler` помечен `@RestControllerAdvice(annotations = RestController.class)`, он обрабатывает только ошибки из всех контроллеров с аннотацией `RestController`.
  
  > Откуда берутся в валидации сообщения на русском "должно быть между 10 и 10000"?
  
  Локализация встроена в Hibernate Validation. Смотрите `Ctrl+Shift+N` и `ValidationMessages_ru.properties`.
 
 ## ![hw](https://cloud.githubusercontent.com/assets/13649199/13672719/09593080-e6e7-11e5-81d1-5cb629c438ca.png) Домашнее задание HW10
-- 1: Сделать валидацию в AdminAjaxController/MealAjaxController через `ExceptionInfoHandler`. Вернуть клиенту `ErrorInfo` и статус `HttpStatus.UNPROCESSABLE_ENTITY` (тип методов контроллеров вернуть обратно на `void`).
+- 1: Сделать валидацию в `AdminUIController/MealUIController` через `ExceptionInfoHandler`. Вернуть клиенту `ErrorInfo` и статус `HttpStatus.UNPROCESSABLE_ENTITY` (тип методов контроллеров сделать `void`).
 - 2: Сделать валидацию принимаемых json объектов в REST контроллерах через `ExceptionInfoHandler`. Добавить в Rest контроллеры тест для невалидных данных.
   - <a href="https://dzone.com/articles/spring-31-valid-requestbody">@Valid @RequestBody + Error handling</a>
 - 3: Сделать обработку ошибки при дублирования email (вывод сообщения "User with this email already exists") для: 
@@ -221,4 +221,4 @@ Datatables перевели на ajax (`"ajax": {"url": ajaxUrl, ..`), те пр
 - 3: Можно не создавать собственные эксепшены, а в `ExceptionInfoHandler` ловить стандартные 
 - 4: в `MethodArgumentNotValidException` также есть `e.getBindingResult()`, его можно обрабатывать по аналогии с `BindException`
 - 5: Не дублируйте код переключения локали на странице логина и в приложении
-- 6: При проблемах с валидацией `Meals` в `MealRestController`, посмотрите на валидацию в `MealAjaxController.updateOrCreate`
+- 6: При проблемах с валидацией `Meals` в `MealRestController`, посмотрите на валидацию в `MealUIController.updateOrCreate`
