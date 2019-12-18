@@ -2,8 +2,7 @@
 
 ## <a href="https://drive.google.com/open?id=0B9Ye2auQ_NsFSzlObk8tbHdtcXc">Материалы занятия</a>
 
-### Все материалы проекта (в том числе и будущие обновления) останутся доступны в [Google Drive](https://drive.google.com/drive/folders/0B9Ye2auQ_NsFflp6ZHBLSFI2OGVEZ2NQU0pzZkx4SnFmOWlzX0lzcDFjSi1SRk5OdzBYYkU)
-### [ReleaseNotes (изменения в проекте)](https://github.com/JavaOPs/topjava/blob/master/ReleaseNotes.md) 
+### Все материалы проекта (в том числе и будущие обновления) останутся доступны без органичения по времени в [Google Drive](https://drive.google.com/drive/folders/0B9Ye2auQ_NsFflp6ZHBLSFI2OGVEZ2NQU0pzZkx4SnFmOWlzX0lzcDFjSi1SRk5OdzBYYkU)
 
 ### ![correction](https://cloud.githubusercontent.com/assets/13649199/13672935/ef09ec1e-e6e7-11e5-9f79-d1641c05cbe6.png) Правки в проекте
 
@@ -202,11 +201,12 @@ Datasources advanced
 ## Пожалуйста <a href="http://goo.gl/forms/PtFcPqEV5n">ответь на 4-6 вопросов по проекту</a>, это важно!
 
 ## ![error](https://cloud.githubusercontent.com/assets/13649199/13672935/ef09ec1e-e6e7-11e5-9f79-d1641c05cbe6.png) Замечания по резюме:
+- **Вставь ссылку на свой сертификат [из личного профиля](http://javaops.ru/auth/profile#finished), немного досрочно:)**
 - варианты размещения: google doc + linkedin + hh + ... 
 - хорошо, если будет в html формате (например в https://pages.github.com/). [Например так](https://gkislin.github.io/), [на github](https://github.com/gkislin/gkislin.github.io/blob/master/index.html)
 -  возраст и день рождения можно не писать
 -  все упоминания Junior убрать!
 -  линки делай кликабельными (если формат поддерживает)
--  если нет опыта в IT, обязательно вставь [участие в стажировке Topjava](https://github.com/JavaOPs/topjava/blob/master/cv.md#Позиционирование-проекта-topjava). Также вставь ссылку на свой сертификат (она есть в личном профиле). Весь не-IT опыт можно кратко.
+-  если нет опыта в IT, обязательно вставь [участие в стажировке Topjava](https://github.com/JavaOPs/topjava/blob/master/cv.md#Позиционирование-проекта-topjava). Весь не-IT опыт можно кратко.
 - всю выгодную для себя информацию (и важную для HR) распологайте вверху. Название секций в резюме и их порядок относительно стандартный и важный
 - **Внимание: резюме на hh или других ресурсах ДОЛЖНО БЫТЬ ОТКРЫТО ДЛЯ ПРОСМОТРА и иметь телефон для связи**
