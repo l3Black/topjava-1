@@ -18,7 +18,7 @@
 > - Выставлять кодировку `-Dfile.encoding=UTF-8` лучше в _Help menu -> Edit Custom VM Options_
 > - Советы по дополнительным настройкам: 
 >   - [Customize IntelliJ IDEA Memory](http://tomaszdziurko.com/2015/11/1-and-the-only-one-to-customize-intellij-idea-memory-settings)
->   - [Increase IDE memory limit in IntelliJ IDEA](http://tomaszdziurko.com/2015/11/1-and-the-only-one-to-customize-intellij-idea-memory-settings)
+>   - [Increase IDE memory limit in IntelliJ IDEA](https://stackoverflow.com/questions/13578062/how-to-increase-ide-memory-limit-in-intellij-idea-on-mac)
 >   - [Slow startup time on Windows](https://youtrack.jetbrains.com/issue/IDEA-211178#focus=streamItem-27-3412218.0-0)
 
 #### Apply 11_02_HW10_validation.patch
@@ -110,6 +110,7 @@ Config Vars
 
 Datasources advanced
     ssl=true
+    sslmode=require
     sslfactory=org.postgresql.ssl.NonValidatingFactory
 ```    
 
@@ -117,7 +118,6 @@ Datasources advanced
    -  <a href="https://www.heroku.com/">PaaS-платформа Heroku</a></h3>
    -  Конфигурирование приложения для запуска через <a href="https://devcenter.heroku.com/articles/java-webapp-runner">Tomcat-based Java Web</a>
    -  Конфигурирование <a href="https://devcenter.heroku.com/articles/connecting-to-relational-databases-on-heroku-with-java#using-the-database_url-in-spring-with-xml-configuration">DataSource profile для Heroku</a>
-   -  <a href="http://www.jetbrains.com/idea/webhelp/run-debug-configuration-heroku-deployment.html">Интерграция с IDEA</a>
    -  <a href="http://www.paasify.it/filter">Find your Platform as a Service</a>
    -  <a href="https://devcenter.heroku.com/articles/getting-started-with-java#set-up">Getting Started with Java on Heroku</a>
    -  <a href="https://devcenter.heroku.com/articles/keys">Managing Your SSH Keys</a>
