@@ -130,7 +130,7 @@
  
 > **Установите переменную окружения на TOPJAVA_ROOT на корень проекта и перезапустите IDEA. Слеши в пути должны быть в стиле unix (/)**
 - [Set environment for Win/Mac/Unix](https://www.xenovation.com/blog/development/java/how-to-set-java-home)
-- [Set environment for UNIX](https://askubuntu.com/questions/730/how-do-i-set-environment-variables)
+- [Set environment for UNIX](https://askubuntu.com/a/849954)
 
 
 > - изменения в проекте: убрал `LoggerWrapper` и логирую напрямую в логгер SLF4J. При логгировании через вспомогательный класс, в логе теряется имя исходного класса.
