@@ -58,7 +58,7 @@ _Антуан де Сент-Экзюпери_
 - 6: базу лучше взять без установки (H2 или HSQLDB). Ваше приложение должно сразу запуститься, **без всяких настроек и переменных окружения**
 - 7: по возможности сделать JUnit тесты
 - 8: уделяйте внимание обработке ошибок
-- 9: далаем REST API в соответствии с концепцией REST
+- 9: далаем REST API в соответствии с концепцией REST (url в общем имеют вид`{ресурс}/{id_ресурсa}[/{подресурс}/{id_подресурсa}][параметры]`)
     - **[15 тривиальных фактов о правильной работе с протоколом HTTP](https://habrahabr.ru/company/yandex/blog/265569/)**
     - **<a href="https://medium.com/@mwaysolutions/10-best-practices-for-better-restful-api-cbe81b06f291">10 Best Practices for Better RESTful API</a>**
     - [REST resource hierarchy](https://stackoverflow.com/questions/20951419/what-are-best-practices-for-rest-nested-resources)
